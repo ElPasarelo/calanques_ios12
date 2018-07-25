@@ -13,6 +13,8 @@
 		0845D194210860E600EEF97F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0845D192210860E600EEF97F /* Main.storyboard */; };
 		0845D196210860E800EEF97F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0845D195210860E800EEF97F /* Assets.xcassets */; };
 		0845D199210860E800EEF97F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0845D197210860E800EEF97F /* LaunchScreen.storyboard */; };
+		0845D1A42108663C00EEF97F /* Calanques.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845D1A32108663C00EEF97F /* Calanques.swift */; };
+		0845D1A6210867A400EEF97F /* CalanqueCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845D1A5210867A400EEF97F /* CalanqueCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0845D195210860E800EEF97F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0845D198210860E800EEF97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0845D19A210860E800EEF97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0845D1A32108663C00EEF97F /* Calanques.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calanques.swift; sourceTree = "<group>"; };
+		0845D1A5210867A400EEF97F /* CalanqueCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanqueCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		0845D1A02108652800EEF97F /* Modele */ = {
 			isa = PBXGroup;
 			children = (
+				0845D1A32108663C00EEF97F /* Calanques.swift */,
+				0845D1A5210867A400EEF97F /* CalanqueCollection.swift */,
 			);
 			path = Modele;
 			sourceTree = "<group>";
@@ -164,7 +170,9 @@
 			files = (
 				0845D191210860E600EEF97F /* SecondViewController.swift in Sources */,
 				0845D18D210860E600EEF97F /* AppDelegate.swift in Sources */,
+				0845D1A6210867A400EEF97F /* CalanqueCollection.swift in Sources */,
 				0845D18F210860E600EEF97F /* FirstViewController.swift in Sources */,
+				0845D1A42108663C00EEF97F /* Calanques.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
