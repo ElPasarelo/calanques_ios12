@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iuv-xd-mZT">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -228,7 +228,13 @@
                             <outlet property="delegate" destination="1Ok-wd-QL0" id="dHN-ff-taD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vt1-1t-SAX"/>
+                    <navigationItem key="navigationItem" id="vt1-1t-SAX">
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="YZy-RR-49Z">
+                            <connections>
+                                <action selector="reloadAction:" destination="1Ok-wd-QL0" id="7LN-O1-GmO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="ge2-0J-nIR" kind="show" identifier="Detail" id="1v9-rK-HOd"/>
                     </connections>
@@ -295,6 +301,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1688.8" y="730.88455772113946"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="euA-rv-tmV">
+            <objects>
+                <viewController id="iuv-xd-mZT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MxQ-sI-jNv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sugiton" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-Hh-N16">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSU-NC-KWn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mAH-lq-SEa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQT-hd-nXF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="KL4-ET-JBX">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhM-IM-NUx" customClass="Bouton_Arrondi" customModule="Les_Calanques" customModuleProvider="target">
+                                <rect key="frame" x="20" y="742" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.18943404659999999" green="0.66798126690000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="scS-0H-7oC"/>
+                                </constraints>
+                                <state key="normal" title="Visitez les Calanques">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="hXy-gV-IVk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sugiton" translatesAutoresizingMaskIntoConstraints="NO" id="hqb-od-Ndr" customClass="ImageRonde" customModule="Les_Calanques" customModuleProvider="target">
+                                <rect key="frame" x="100" y="74" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="Fji-1C-EsJ"/>
+                                    <constraint firstAttribute="height" constant="175" id="S4a-cP-TIj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un coin de paradis en plein coeur de la métropole Marseillaise" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaw-kO-HQ5">
+                                <rect key="frame" x="20" y="269" width="335" height="453"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hqb-od-Ndr" firstAttribute="top" secondItem="k85-fX-LOI" secondAttribute="top" constant="30" id="9vA-tI-bkO"/>
+                            <constraint firstItem="hqb-od-Ndr" firstAttribute="centerX" secondItem="MxQ-sI-jNv" secondAttribute="centerX" id="Egx-hH-mrz"/>
+                            <constraint firstItem="t2g-Hh-N16" firstAttribute="leading" secondItem="k85-fX-LOI" secondAttribute="leading" id="Ime-2A-A4o"/>
+                            <constraint firstItem="k85-fX-LOI" firstAttribute="trailing" secondItem="nhM-IM-NUx" secondAttribute="trailing" constant="20" id="Ken-NS-VPn"/>
+                            <constraint firstAttribute="bottom" secondItem="nhM-IM-NUx" secondAttribute="bottom" constant="20" id="Nv8-GP-Tu1"/>
+                            <constraint firstItem="GSU-NC-KWn" firstAttribute="top" secondItem="MxQ-sI-jNv" secondAttribute="top" id="P74-o1-l9Y"/>
+                            <constraint firstItem="k85-fX-LOI" firstAttribute="trailing" secondItem="Uaw-kO-HQ5" secondAttribute="trailing" constant="20" id="Vjy-iM-ewB"/>
+                            <constraint firstAttribute="bottom" secondItem="GSU-NC-KWn" secondAttribute="bottom" id="bcO-aK-bjZ"/>
+                            <constraint firstAttribute="bottom" secondItem="t2g-Hh-N16" secondAttribute="bottom" id="cSw-zK-bA7"/>
+                            <constraint firstItem="GSU-NC-KWn" firstAttribute="trailing" secondItem="k85-fX-LOI" secondAttribute="trailing" id="dhL-wR-gvR"/>
+                            <constraint firstItem="t2g-Hh-N16" firstAttribute="top" secondItem="MxQ-sI-jNv" secondAttribute="top" id="gDw-0L-sQs"/>
+                            <constraint firstItem="nhM-IM-NUx" firstAttribute="top" secondItem="Uaw-kO-HQ5" secondAttribute="bottom" constant="20" id="gos-dq-qWN"/>
+                            <constraint firstItem="t2g-Hh-N16" firstAttribute="trailing" secondItem="k85-fX-LOI" secondAttribute="trailing" id="h8z-ai-4Ic"/>
+                            <constraint firstItem="GSU-NC-KWn" firstAttribute="leading" secondItem="MxQ-sI-jNv" secondAttribute="leading" id="mJ0-T6-yeS"/>
+                            <constraint firstItem="Uaw-kO-HQ5" firstAttribute="leading" secondItem="k85-fX-LOI" secondAttribute="leading" constant="20" id="pkL-U4-Amf"/>
+                            <constraint firstItem="Uaw-kO-HQ5" firstAttribute="top" secondItem="hqb-od-Ndr" secondAttribute="bottom" constant="20" id="xAn-kA-rkQ"/>
+                            <constraint firstItem="nhM-IM-NUx" firstAttribute="leading" secondItem="k85-fX-LOI" secondAttribute="leading" constant="20" id="yqO-3T-b2J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k85-fX-LOI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Txf-sH-yzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698.39999999999998" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -378,6 +470,7 @@
         <image name="earth" width="25.600000381469727" height="25.600000381469727"/>
         <image name="list" width="25.600000381469727" height="25.600000381469727"/>
         <image name="port pin" width="245.75999450683594" height="164.16000366210938"/>
+        <image name="sugiton" width="1600" height="896"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1v9-rK-HOd"/>
