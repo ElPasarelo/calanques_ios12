@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,28 +9,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View 1-->
+        <!--Controller Avec Table View-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="ControllerAvecTableView" customModule="Les_Calanques" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="port pin" translatesAutoresizingMaskIntoConstraints="NO" id="fuN-cb-krR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1D8-gn-gNt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tyL-dU-Gh1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eV0-oo-m5n">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Tgk-QU-B7a">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                             <vibrancyEffect>
@@ -42,7 +42,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visitez les calanques " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxk-Yo-9rq">
-                                <rect key="frame" x="10" y="30" width="355" height="30"/>
+                                <rect key="frame" x="10" y="98" width="355" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7op-iW-rjL"/>
                                 </constraints>
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="arf-gf-BoL">
-                                <rect key="frame" x="10" y="68" width="355" height="540"/>
+                                <rect key="frame" x="10" y="136" width="355" height="583"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="esh-sS-c3y">
                                     <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
@@ -145,21 +145,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Table View 1" image="list" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="i7J-Ml-vpR"/>
                     <connections>
                         <outlet property="tableView" destination="arf-gf-BoL" id="FID-xA-O9q"/>
+                        <segue destination="ge2-0J-nIR" kind="show" identifier="Detail" id="Ubl-Hp-luq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-715.59220389805103"/>
+            <point key="canvasLocation" x="1688.8" y="-715.59220389805103"/>
         </scene>
-        <!--Table View 2-->
+        <!--Table View Integree Controller-->
         <scene sceneID="9rd-iC-y3n">
             <objects>
                 <tableViewController id="1Ok-wd-QL0" customClass="TableViewIntegreeController" customModule="Les_Calanques" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zP5-nR-XdX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -167,7 +168,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WLF-A1-2zL" id="k2a-KK-rzb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -175,11 +176,11 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="169"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fxD-Pc-0W7" id="FNS-e8-sFO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="168.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="168.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA7-OX-Je2">
-                                            <rect key="frame" x="0.0" y="68.5" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="68.666666666666671" width="375" height="100.00000000000001"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="u8e-LQ-vcu">
                                                     <rect key="frame" x="150" y="8" width="217" height="84"/>
@@ -227,27 +228,73 @@
                             <outlet property="delegate" destination="1Ok-wd-QL0" id="dHN-ff-taD"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Table View 2" image="list" id="fAG-Ln-8sh"/>
+                    <navigationItem key="navigationItem" id="vt1-1t-SAX"/>
+                    <connections>
+                        <segue destination="ge2-0J-nIR" kind="show" identifier="Detail" id="1v9-rK-HOd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCe-tX-n04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-13.043478260869566"/>
+            <point key="canvasLocation" x="1688.8" y="-13.043478260869566"/>
         </scene>
-        <!--Carte-->
+        <!--Detail Controller-->
+        <scene sceneID="ow6-8y-18j">
+            <objects>
+                <viewController id="ge2-0J-nIR" customClass="DetailController" customModule="Les_Calanques" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9FN-rZ-tWG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u7W-Ry-6q3" customClass="ImageRonde" customModule="Les_Calanques" customModuleProvider="target">
+                                <rect key="frame" x="87.666666666666686" y="98" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GJJ-V3-Ks4"/>
+                                    <constraint firstAttribute="height" constant="200" id="HP5-As-tmp"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pw8-HN-dlg">
+                                <rect key="frame" x="16" y="318" width="343" height="401"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u7W-Ry-6q3" firstAttribute="centerX" secondItem="9FN-rZ-tWG" secondAttribute="centerX" id="N8F-K7-kQp"/>
+                            <constraint firstItem="ilg-w6-bUI" firstAttribute="bottom" secondItem="Pw8-HN-dlg" secondAttribute="bottom" constant="10" id="QQR-HR-D50"/>
+                            <constraint firstItem="ilg-w6-bUI" firstAttribute="trailing" secondItem="Pw8-HN-dlg" secondAttribute="trailing" constant="16" id="Qy3-U7-HSZ"/>
+                            <constraint firstItem="Pw8-HN-dlg" firstAttribute="top" secondItem="u7W-Ry-6q3" secondAttribute="bottom" constant="20" id="WcX-Zs-53Z"/>
+                            <constraint firstItem="u7W-Ry-6q3" firstAttribute="top" secondItem="ilg-w6-bUI" secondAttribute="top" constant="10" id="aNy-7b-Ove"/>
+                            <constraint firstItem="Pw8-HN-dlg" firstAttribute="leading" secondItem="ilg-w6-bUI" secondAttribute="leading" constant="16" id="k9R-za-b2r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ilg-w6-bUI"/>
+                    </view>
+                    <connections>
+                        <outlet property="calanqueIV" destination="u7W-Ry-6q3" id="FrS-61-QN4"/>
+                        <outlet property="nomEtDesc" destination="Pw8-HN-dlg" id="6pF-Vz-LGB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbY-6G-RmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="-13.300492610837439"/>
+        </scene>
+        <!--Controller Avec Carte-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ControllerAvecCarte" customModule="Les_Calanques" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Carte" image="earth" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="WkD-no-1P5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="731"/>
+            <point key="canvasLocation" x="1688.8" y="730.88455772113946"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -259,14 +306,71 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="1Ok-wd-QL0" kind="relationship" relationship="viewControllers" id="VrY-Ny-kQ4"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="UVj-ig-81z" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="sEG-eY-yxs" kind="relationship" relationship="viewControllers" id="VrY-Ny-kQ4"/>
+                        <segue destination="jf3-kK-EPm" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Table View 1-->
+        <scene sceneID="Hxj-3L-1hu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UVj-ig-81z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table View 1" image="list" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nsq-wg-okE">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="VKY-6C-GL7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3O-Pl-hEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-715.59220389805103"/>
+        </scene>
+        <!--Table View 2-->
+        <scene sceneID="gnQ-Cg-tZI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sEG-eY-yxs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table View 2" image="list" id="fAG-Ln-8sh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X6g-tU-4Lb">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1Ok-wd-QL0" kind="relationship" relationship="rootViewController" id="Sw5-cA-KTi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dV6-6W-pj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-13.043478260869566"/>
+        </scene>
+        <!--Carte-->
+        <scene sceneID="cdB-L9-ce2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jf3-kK-EPm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Carte" image="earth" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wyQ-7B-hCt">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="yLj-vx-WFw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYu-jQ-ZkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="730.88455772113946"/>
         </scene>
     </scenes>
     <resources>
@@ -275,4 +379,7 @@
         <image name="list" width="25.600000381469727" height="25.600000381469727"/>
         <image name="port pin" width="245.75999450683594" height="164.16000366210938"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1v9-rK-HOd"/>
+    </inferredMetricsTieBreakers>
 </document>
