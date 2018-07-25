@@ -16,14 +16,106 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visitez les calanques " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxk-Yo-9rq">
+                                <rect key="frame" x="10" y="30" width="355" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7op-iW-rjL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="arf-gf-BoL">
+                                <rect key="frame" x="10" y="68" width="355" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="esh-sS-c3y">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Alternative" rowHeight="200" id="Q3k-S3-Qm5" customClass="CalanqueCellAlternative" customModule="Les_Calanques" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="355" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q3k-S3-Qm5" id="oke-Pa-ugu">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callelongue" translatesAutoresizingMaskIntoConstraints="NO" id="Dw9-8l-G3g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="199.5"/>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYz-ig-csP">
+                                                    <rect key="frame" x="0.0" y="139.5" width="355" height="60"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="F8F-dm-476">
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="60"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vy0-xr-LDC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="355" height="60"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="j5c-Z9-BMH">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="60"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </view>
+                                                                <vibrancyEffect>
+                                                                    <blurEffect style="light"/>
+                                                                </vibrancyEffect>
+                                                            </visualEffectView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="D2N-bR-LDy"/>
+                                                    </constraints>
+                                                    <blurEffect style="light"/>
+                                                </visualEffectView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c7C-RA-d8y">
+                                                    <rect key="frame" x="0.0" y="139.5" width="355" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="EQg-RG-VKa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="c7C-RA-d8y" secondAttribute="trailing" id="3zW-4U-i4d"/>
+                                                <constraint firstItem="Dw9-8l-G3g" firstAttribute="leading" secondItem="oke-Pa-ugu" secondAttribute="leading" id="BfO-DR-lZt"/>
+                                                <constraint firstAttribute="bottom" secondItem="c7C-RA-d8y" secondAttribute="bottom" id="F5Y-PU-jaa"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dw9-8l-G3g" secondAttribute="bottom" id="Piw-HD-Wcp"/>
+                                                <constraint firstAttribute="bottom" secondItem="XYz-ig-csP" secondAttribute="bottom" id="ZgY-wJ-2Fe"/>
+                                                <constraint firstItem="Dw9-8l-G3g" firstAttribute="top" secondItem="oke-Pa-ugu" secondAttribute="top" id="dbj-W2-MD1"/>
+                                                <constraint firstItem="c7C-RA-d8y" firstAttribute="leading" secondItem="oke-Pa-ugu" secondAttribute="leading" id="gdC-Nl-Ffb"/>
+                                                <constraint firstItem="XYz-ig-csP" firstAttribute="leading" secondItem="oke-Pa-ugu" secondAttribute="leading" id="ofk-gz-rwo"/>
+                                                <constraint firstAttribute="trailing" secondItem="XYz-ig-csP" secondAttribute="trailing" id="rG2-x6-4wP"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dw9-8l-G3g" secondAttribute="trailing" id="rqF-Qq-rey"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="calanqueIV" destination="Dw9-8l-G3g" id="cbX-5v-odE"/>
+                                            <outlet property="nomLabel" destination="c7C-RA-d8y" id="sf7-O7-aIx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kxk-Yo-9rq" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="10" id="9u3-FL-sdd"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="kxk-Yo-9rq" secondAttribute="trailing" constant="10" id="AGj-Bd-4h7"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="arf-gf-BoL" secondAttribute="trailing" constant="10" id="Eph-iX-RCa"/>
+                            <constraint firstItem="kxk-Yo-9rq" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="10" id="IZ4-Li-bsq"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="arf-gf-BoL" secondAttribute="bottom" constant="10" id="Krn-X4-ZRv"/>
+                            <constraint firstItem="arf-gf-BoL" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="10" id="PCg-i5-lwy"/>
+                            <constraint firstItem="arf-gf-BoL" firstAttribute="top" secondItem="kxk-Yo-9rq" secondAttribute="bottom" constant="8" id="g7w-LG-9t7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Table View 1" image="list" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-715"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-715.59220389805103"/>
         </scene>
         <!--Table View 2-->
         <scene sceneID="9rd-iC-y3n">
@@ -141,6 +233,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="callelongue" width="329.14285278320312" height="219.29142761230469"/>
         <image name="earth" width="25.600000381469727" height="25.600000381469727"/>
         <image name="list" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
