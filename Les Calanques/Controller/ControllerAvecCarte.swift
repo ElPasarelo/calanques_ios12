@@ -50,7 +50,11 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
             if annotationView == nil {
                 
-                annotationView = MonAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
+                //Overide init
+                //annotationView = MonAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
+                
+                annotationView = MonAnnotationView(controller: self, annotation: anno, reuseIdentifier: reuseIdentifier)
+                
                 //Basique
 //                annotationView = MKAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
 //                annotationView?.image = UIImage(named: "placeholder")
@@ -63,8 +67,10 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
         return nil
     }
     
-    @objc func detail() {
-        print("Detail")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Detail", let vc = segue.destination as? DetailController {
+            vc.calanqueRecue = sender as? Calanque
+        }
     }
     
     

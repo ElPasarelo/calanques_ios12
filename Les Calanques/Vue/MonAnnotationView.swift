@@ -10,7 +10,15 @@ import UIKit
 import MapKit
 
 class MonAnnotationView: MKAnnotationView {
-        
+    
+    var controller: ControllerAvecCarte?
+    
+    init(controller: ControllerAvecCarte?, annotation: MKAnnotation?, reuseIdentifier: String?) {
+        self.controller = controller
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        setup()
+    }
+    
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         setup()
@@ -42,8 +50,14 @@ class MonAnnotationView: MKAnnotationView {
     func ajoutRightButton() -> UIButton {
         let btn = UIButton()
         btn.setImage(UIImage(named: "detail"), for: .normal)
-        btn.addTarget(self, action: #selector(ControllerAvecCarte.detail), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(detail), for: .touchUpInside)
         return btn
     }
-
+    
+    @objc func detail() {
+        guard let anno = annotation as? MonAnnotation else { return }
+        controller?.performSegue(withIdentifier: "Detail", sender: anno.calanque)
+    }
+    
+    
 }
