@@ -49,15 +49,22 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
         if let anno = annotation as? MonAnnotation {
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
             if annotationView == nil {
-                annotationView = MKAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
-                annotationView?.image = UIImage(named: "placeholder")
-                annotationView?.canShowCallout = true
+                
+                annotationView = MonAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
+                //Basique
+//                annotationView = MKAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
+//                annotationView?.image = UIImage(named: "placeholder")
+//                annotationView?.canShowCallout = true
                 return annotationView
             } else {
                return annotationView
             }
         }
         return nil
+    }
+    
+    @objc func detail() {
+        print("Detail")
     }
     
     
