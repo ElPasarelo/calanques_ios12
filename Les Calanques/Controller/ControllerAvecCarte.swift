@@ -19,6 +19,12 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         mapView.delegate = self
         addAnnotations()
+        NotificationCenter.default.addObserver(self, selector: #selector(notif(notification:)), name: Notification.Name("Detail"), object: nil)
+    }
+    
+    @objc func notif(notification: Notification) {
+        print("On a recu une notif")
+        performSegue(withIdentifier: "Detail", sender: notification.object)
     }
     
     func addAnnotations() {

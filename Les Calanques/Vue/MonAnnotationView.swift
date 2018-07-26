@@ -56,7 +56,11 @@ class MonAnnotationView: MKAnnotationView {
     
     @objc func detail() {
         guard let anno = annotation as? MonAnnotation else { return }
-        controller?.performSegue(withIdentifier: "Detail", sender: anno.calanque)
+        // Methode 1: Avec ref du controller dans init()
+        //controller?.performSegue(withIdentifier: "Detail", sender: anno.calanque)
+        
+        //Methode2: NotificationCenter
+        NotificationCenter.default.post(name: Notification.Name("Detail"), object: anno.calanque)
     }
     
     
